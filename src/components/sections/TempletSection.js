@@ -95,7 +95,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 
 const TemplateSection = () => {
