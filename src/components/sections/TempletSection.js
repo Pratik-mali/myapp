@@ -96,7 +96,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-import YouTube from 'react-youtube';
+
 
 const TemplateSection = () => {
   const navigate = useNavigate();
@@ -180,54 +180,6 @@ const BusinessContainer = styled.div`
   color: #333;
 `;
 
-const AboutSection = styled.section`
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 40px;
-  text-align: center;
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #0073e6;
-  }
-
-  p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-  }
-`;
-
-const VideoSection = styled.section`
-  background: #e9ecef;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 40px;
-  text-align: center;
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #0073e6;
-  }
-
-  .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-`;
 
 const TemplatesSection = styled.section`
   margin-bottom: 15%;
@@ -291,28 +243,4 @@ const TemplateOption = styled.div`
   }
 `;
 
-/* Responsive styling */
-const responsiveStyles = keyframes`
-  @media (max-width: 768px) {
-    .about-section,
-    .video-section,
-    .templates-section {
-      padding: 15px;
-    }
 
-    .filter-buttons {
-      flex-wrap: wrap;
-    }
-
-    .filter-buttons button {
-      padding: 8px 15px;
-      font-size: 0.9rem;
-    }
-
-    .templates-section h2,
-    .about-section h2,
-    .video-section h2 {
-      font-size: 1.5rem;
-    }
-  }
-`;
