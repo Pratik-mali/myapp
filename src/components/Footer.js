@@ -55,9 +55,7 @@ const FooterBottom = styled.div`
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-const toggleMenu = () => {
-  setIsOpen(!isOpen);
-};
+
 
 const closeMenu = () => {
   setIsOpen(false);
