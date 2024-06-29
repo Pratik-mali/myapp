@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/terms" element={<TermsAndConditions />} />
-          {/* <Route path="/preview" element={<PreviewPage />} /> Ensure PreviewPage route exists but not in navbar */}
+          <Route path="/preview" element={<PreviewPage />} />
         </Routes>
         <Footer/>
       </div>
