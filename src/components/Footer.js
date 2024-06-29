@@ -53,12 +53,12 @@ const FooterBottom = styled.div`
 `;
 
 const Footer = () => {
-  const [isOpen, setIsOpen] = useState(false);
+ 
 
 
 
 const closeMenu = () => {
-  setIsOpen(false);
+ 
 };
 
   return (
