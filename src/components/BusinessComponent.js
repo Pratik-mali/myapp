@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube';
 import './BusinessComponent.css';
 
 const BusinessComponent = () => {
