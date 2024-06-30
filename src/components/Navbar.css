@@ -1,0 +1,102 @@
+/* General styling for the navbar */
+.navbar {
+  background: linear-gradient(45deg, #ff7300, #febd00);
+  padding: 1rem;
+  padding-bottom: 5px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #580000;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ff7300;
+}
+
+/* Styling for the hamburger icon */
+.hamburger {
+  background: none;
+  width: 30px;
+  margin-right: 50px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+.hamburger:after {
+  content: "☰";
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.hamburger.open:after {
+  transform: rotate(90deg);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu a {
+  color: #ffffff;
+  border-bottom: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #ff7300;
+  transform: scale(1.1);
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #973131;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-menu a {
+    margin: 0.5rem 0;
+  }
+}

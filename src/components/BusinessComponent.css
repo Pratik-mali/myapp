@@ -1,0 +1,261 @@
+/* General styling for the container */
+.business-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Hero section styling */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+.hero-image {
+  background-image: url('./hero.png'); /* Replace with your hero image */
+
+  width: 110%;
+  height: 110%;
+  margin-left: -1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+  background-image: linear-gradient(45deg, #ff9a9a, #800000);
+  -webkit-background-clip: text;
+  color: transparent;
+
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* About section styling */
+.about-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Video section styling */
+.video-section {
+  background: #e9ecef;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Templates section styling */
+.templates-section {
+  background: #ffffff;
+  padding: 0px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.templates-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  background: linear-gradient(45deg, #ff510c, #491002);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: linear-gradient(45deg, #ffd000, #610505);
+  transform: translateY(-2px);
+}
+
+.template-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0px;
+}
+
+.template-option {
+  background: white;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0,0, 0.1);
+  text-align: center;
+  
+  }
+  
+  .template-option img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  }
+  
+  .template-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 0px;
+  padding: 5px;
+  }
+  
+  .template-button {
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(45deg, #ff7300, #febd00);
+
+  color: #ffffff;
+  border: 1px solid #973131;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  }
+  
+  .template-button
+  {
+  background-color: #e2d4b4;
+  }
+  
+  /* Modal styling */
+  .preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  }
+  
+  .preview-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  }
+  
+  .preview-content img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  }
+  
+  .close-button {
+  position: absolute;
+  top: -10px;
+  left: 40%;
+  background: none;
+  color: #ff5c5c;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  }
+
+  .close-button h1 {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    background: none;
+    color: #ff0000;
+    font-size: 24px;
+    border: 2px solid red;
+    cursor: pointer;
+    }
+  
+  .close-button
+  {
+  color: #e60000;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+  .about-section,
+  .video-section,
+  .templates-section {
+  padding: 15px;
+  }
+  
+  .filter-buttons {
+  flex-wrap: wrap;
+  }
+  
+  .filter-buttons button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  }
+  
+  .templates-section h2,
+  .about-section h2,
+  .video-section h2 {
+  font-size: 1.5rem;
+  }
+  
+  .hero-section {
+  height: 300px; /* Adjust height for mobile */
+  }
+  
+  .hero-text h1 {
+  font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+  font-size: 1.2rem;
+  }
+  }
