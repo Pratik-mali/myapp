@@ -10,6 +10,7 @@ import TermsAndConditions from './components/TermsAndConditions';
 import Navbar from './components/Navbar';
 import PreviewPage from './components/PreviewPage'; // Import PreviewPage component
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/preview" element={<PreviewPage />} /> {/* Ensure PreviewPage route exists but not in navbar */}
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

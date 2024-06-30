@@ -25,18 +25,25 @@ const BusinessComponent = () => {
     { id: 1, category: 'Category 1', imageUrl: './Marriage Biodata Template-16.png' },
     { id: 1, category: 'Category 1', imageUrl: './Marriage Biodata Template-17.png' },
     { id: 1, category: 'Category 1', imageUrl: './Marriage Biodata Template-18.png' },
-
-
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [previewTemplate, setPreviewTemplate] = useState(null);
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
 
-  const handleImageClick = (template) => {
+  const handleCustomizeClick = (template) => {
     navigate(`/input-form/${template.id}`);
+  };
+
+  const handlePreviewClick = (template) => {
+    setPreviewTemplate(template);
+  };
+
+  const handleClosePreview = () => {
+    setPreviewTemplate(null);
   };
 
   const filteredTemplates = selectedCategory === 'All'
@@ -81,12 +88,26 @@ const BusinessComponent = () => {
         </div>
         <div className="template-options">
           {filteredTemplates.map((template) => (
-            <div key={template.id} className="template-option" onClick={() => handleImageClick(template)}>
+            <div key={template.id} className="template-option">
               <img src={template.imageUrl} alt={`Template ${template.id}`} />
+              <div className="template-buttons">
+                <button className="template-button" onClick={() => handlePreviewClick(template)}>Preview</button>
+                <button className="template-button" onClick={() => handleCustomizeClick(template)}>Use</button>
+              </div>
             </div>
           ))}
         </div>
       </section>
+
+      {previewTemplate && (
+        <div className="preview-modal">
+          <div className="preview-content">
+            <button className="close-button" onClick={handleClosePreview}>✖</button>
+            <img src={previewTemplate.imageUrl} alt={`Template ${previewTemplate.id}`} />
+            <button className="template-button" onClick={() => handleCustomizeClick(previewTemplate)}>Customize</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

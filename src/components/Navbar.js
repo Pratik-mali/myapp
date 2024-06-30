@@ -19,8 +19,10 @@ const Navbar = () => {
         <Link to="/" className="navbar-brand" onClick={closeMenu}>
           mazabiodata.com
         </Link>
-        <button className="hamburger" onClick={toggleMenu}>
-          ☰
+        <button
+          className={`hamburger ${isOpen ? 'open' : ''}`}
+          onClick={toggleMenu}
+        >
         </button>
         <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
           <Link to="/" onClick={closeMenu}>Home</Link>

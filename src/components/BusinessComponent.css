@@ -16,11 +16,7 @@
   text-align: center;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #0073e6;
-}
+
 
 .about-section p {
   font-size: 1rem;
@@ -37,11 +33,7 @@
   text-align: center;
 }
 
-.video-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #0073e6;
-}
+
 
 .video-wrapper {
   position: relative;
@@ -59,16 +51,8 @@
 }
 
 /* Templates section styling */
-.templates-section {
-  margin-bottom: 15%;
-  text-align: center;
-}
 
-.templates-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #0073e6;
-}
+
 
 /* New category button styling */
 .filter-buttons {
@@ -79,7 +63,7 @@
 }
 
 .filter-buttons button {
-  background: linear-gradient(45deg, #0073e6, #005bb5);
+  background: linear-gradient(45deg, #ff510c, #491002);
   color: #fff;
   border: none;
   width: 100px;
@@ -93,33 +77,93 @@
 
 .filter-buttons button.active,
 .filter-buttons button:hover {
-  background: linear-gradient(45deg, #005bb5, #003f8a);
+  background: linear-gradient(45deg, #ffd000, #610505);
   transform: translateY(-2px);
 }
 
 .template-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+
+ 
 }
 
 .template-option {
   position: relative;
-  cursor: pointer;
-  transition: transform 0.3s ease, z-index 0.3s ease;
+
 }
 
 .template-option img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, z-index 0.3s ease;
+  
 }
 
-.template-option:hover {
-  transform: scale(2.2);
-  z-index: 1;
+
+
+.template-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.template-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F5E7B2;
+  color: #973131;
+  border: 1px solid #973131;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.template-button:hover {
+  background-color: #e2d4b4;
+}
+
+/* Modal styling */
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.preview-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.preview-content img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: -10px;
+  left: 40%;
+  background: none;
+  color: #ff5c5c;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #e60000;
 }
 
 /* Responsive styling */

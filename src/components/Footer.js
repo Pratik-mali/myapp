@@ -1,16 +1,22 @@
-import React from 'react';
-import './Footer.css';
+// components/Footer.js
 
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link if you need navigation
+import './Footer.css'
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <p>&copy; {new Date().getFullYear()} mazabiodata.com. All rights reserved.</p>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </nav>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 text-center">
+            <p>&copy; 2024 Your Website Name</p>
+            <ul className="footer-links">
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/terms">Terms and Conditions</Link></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   );
