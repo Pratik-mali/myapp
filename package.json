@@ -16,6 +16,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "astro": "^4.11.3",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
@@ -40,10 +41,13 @@
     "react-pdf-js": "^5.1.0",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.2",
     "react-stripe-checkout": "^2.6.3",
     "react-to-pdf": "^1.0.1",
     "react-youtube": "^10.1.0",
+    "slick-carousel": "^1.8.1",
     "stripe": "^15.9.0",
+    "swiper": "^11.1.4",
     "transliterate": "^1.0.1",
     "transliteration": "^2.3.5",
     "web-vitals": "^2.1.4"
@@ -51,11 +55,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-      "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -78,8 +81,5 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.1"
-  },
-
-  "homepage": "http://pratik-mali.github.io/myapp/"
-
+  }
 }
