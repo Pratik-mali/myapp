@@ -8,7 +8,7 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import TermsAndConditions from './components/TermsAndConditions';
 import Navbar from './components/Navbar';
-import PreviewPage from './components/PreviewPage'; // Import PreviewPage component
+import PreviewPage from './components/PreviewPage';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Footer from './components/Footer';
 
@@ -24,8 +24,9 @@ const App = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/terms" element={<TermsAndConditions />} />
-          <Route path="/preview" element={<PreviewPage />} /> {/* Ensure PreviewPage route exists but not in navbar */}
+          <Route path="/preview" element={<PreviewPage />} />
         </Routes>
+
         <Footer />
       </div>
     </Router>
