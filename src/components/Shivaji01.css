@@ -1,8 +1,0 @@
-@font-face {
-  font-family: 'NotoSansDevanagari';
-  src: url('NotoSansDevanagari-Regular.ttf') format('truetype');
-}
-
-.marathi-input {
-  font-family: 'NotoSansDevanagari', sans-serif;
-}
