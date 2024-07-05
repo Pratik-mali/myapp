@@ -96,7 +96,8 @@ const BusinessComponent = () => {
           </li>
 <li>
 प्रेम आणि आदराच्या नात्यात बांधण्यासाठी एक उत्तम बायोडाटा बनवा.
-          </li>
+          </li>
+
           <li>
 जोडीदार निवडताना बायोडाटा एक महत्त्वाची भूमिका बजावतो.
 
@@ -177,9 +178,7 @@ const BusinessComponent = () => {
       )}
       <FeedbackSlider />
       <QuoteSlideshow />
-      {showScrollToTop && (
-        <button className="scroll-to-top" onClick={handleScrollToTop}>↑</button>
-      )}
+    
     </div>
   );
 };
