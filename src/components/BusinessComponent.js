@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './BusinessComponent.css';
 import FeedbackSlider from './FeedbackSlider';
@@ -29,16 +29,6 @@ const BusinessComponent = () => {
     { id: 17, category: 'Jain', imageUrl: './Marriage Biodata Template-17.png', bestSeller: false },
     { id: 18, category: 'Muslim', imageUrl: './Marriage Biodata Template-18.png', bestSeller: false },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      setShowScrollToTop(scrollTop > 300);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -147,7 +137,6 @@ const BusinessComponent = () => {
       )}
       <FeedbackSlider />
       <QuoteSlideshow />
-    
     </div>
   );
 };
