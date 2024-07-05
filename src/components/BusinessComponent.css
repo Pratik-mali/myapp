@@ -155,9 +155,6 @@
   transition: transform 0.3s ease;
 }
 
-.template-option img:hover {
-  transform: scale(1.05);
-}
 
 .template-description {
   font-size: 0.9rem;
