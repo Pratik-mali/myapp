@@ -32,7 +32,10 @@ const BusinessComponent = () => {
   ];
 
   useEffect(() => {
-  
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setShowScrollToTop(scrollTop > 300);
+    };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -58,8 +61,6 @@ const BusinessComponent = () => {
     document.getElementById('templates-section').scrollIntoView({ behavior: 'smooth' });
   };
 
-
-
   const filteredTemplates = selectedCategory === 'All'
     ? templates
     : templates.filter((template) => template.category === selectedCategory);
@@ -80,42 +81,15 @@ const BusinessComponent = () => {
       <section className="about-section">
         <h2>बायोडाटा का महत्त्वाचे</h2>
         <p>
-          <li>सुखी वैवाहिक जीवनासाठी पहिली पायरी म्हणजे सुसज्ज बायोडाटा.
-          </li>
-          <li>
-वैवाहिक जीवनाची सुरुवात एका परिपूर्ण बायोडाटासोबत करा.
-
-          </li>
-          <li>
-योग्य जोडीदाराची निवड करण्यासाठी बायोडाटा आवश्यक.
-
-          </li>
-<li>
-प्रेम आणि आदराच्या नात्यात बांधण्यासाठी एक उत्तम बायोडाटा बनवा.
-          </li>
-
-          <li>
-जोडीदार निवडताना बायोडाटा एक महत्त्वाची भूमिका बजावतो.
-
-          </li>
-          <li>
-वैवाहिक जीवनाचे यशस्वी भविष्य एक परिपूर्ण बायोडाटाने सुनिश्चित होते.
-
-          </li>
-          <li>
-तुमच्या व्यक्तिमत्वाची खरी ओळख देणारा बायोडाटा तयार करा.
-
-          </li>
-          <li>
-जोडीदाराच्या शोधात असताना एक प्रभावी बायोडाटा असणे महत्त्वाचे आहे.
-
-          </li>
-          <li>
-सपनों का साथी चुनने के लिए एक संपूर्ण बायोडाटा महत्वपूर्ण है
-
-          </li>
-          
-
+          <li>सुखी वैवाहिक जीवनासाठी पहिली पायरी म्हणजे सुसज्ज बायोडाटा.</li>
+          <li>वैवाहिक जीवनाची सुरुवात एका परिपूर्ण बायोडाटासोबत करा.</li>
+          <li>योग्य जोडीदाराची निवड करण्यासाठी बायोडाटा आवश्यक.</li>
+          <li>प्रेम आणि आदराच्या नात्यात बांधण्यासाठी एक उत्तम बायोडाटा बनवा.</li>
+          <li>जोडीदार निवडताना बायोडाटा एक महत्त्वाची भूमिका बजावतो.</li>
+          <li>वैवाहिक जीवनाचे यशस्वी भविष्य एक परिपूर्ण बायोडाटाने सुनिश्चित होते.</li>
+          <li>तुमच्या व्यक्तिमत्वाची खरी ओळख देणारा बायोडाटा तयार करा.</li>
+          <li>जोडीदाराच्या शोधात असताना एक प्रभावी बायोडाटा असणे महत्त्वाचे आहे.</li>
+          <li>सपनों का साथी चुनने के लिए एक संपूर्ण बायोडाटा महत्वपूर्ण है.</li>
         </p>
       </section>
 
