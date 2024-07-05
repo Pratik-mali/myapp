@@ -63,11 +63,9 @@ const BusinessComponent = () => {
             <p>Find and customize the perfect template for your needs</p>
   
     <div className="myButton">
-      <div>
-            <button className="scroll-button" onClick={handleScrollToTemplates}>Explore Templates</button>
-    </div>
-            <button className="scroll-button" onClick={handleScrollToTemplates}>With Photo</button>
-            <button className="scroll-button" onClick={handleScrollToTemplates}>Without Photo</button>
+
+            <button className="scroll-button" onClick={handleScrollToTemplates}>फोटोसह</button>
+            <button className="scroll-button" onClick={handleScrollToTemplates}>फोटोशिवाय</button>
             </div>
           </div>
           <img src="/starr.png" alt="Rotating" className="rotating-image" />
