@@ -15,6 +15,11 @@
   width:100%;
   justify-content:center;
 }
+
+.myButtons {
+  width:100%;
+  justify-content:center;
+}
 /* Hero section styling */
 .hero-section {
   position: relative;
@@ -297,7 +302,7 @@
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
-  width: 180px;
+  width: auto;
 }
 
 .scroll-button:hover {
