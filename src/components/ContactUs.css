@@ -122,10 +122,6 @@
   transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
-.template-option:hover {
-  transform: scale(1.2);
-  z-index: 1;
-}
 
 .customize-button {
   display: none;
