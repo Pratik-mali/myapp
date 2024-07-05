@@ -42,7 +42,7 @@ const Navbar = () => {
           <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
           <Link to="/terms" onClick={closeMenu}>Terms & Conditions</Link>
         </div>
-        <Link to="/image-templates" className="self-assess-button" onClick={closeMenu}>Start Now</Link>
+        <Link to="/image-templates" className="self-assess-button" onClick={closeMenu}>Wedding Groups</Link>
         <button
           className={`hamburger ${isOpen ? 'open' : ''}`}
           onClick={toggleMenu}
