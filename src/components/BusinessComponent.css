@@ -280,9 +280,9 @@
 
 /* CSS for scroll buttons */
 .scroll-button {
- background:#fff,
-   border: 1px solid #5e2f63,
-   border-radius: 5px,
+ background:#fff;
+   border: 1px solid #5e2f63;
+   border-radius: 5px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
