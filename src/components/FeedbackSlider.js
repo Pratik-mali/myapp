@@ -1,11 +1,12 @@
-// src/components/FeedbackSlider.js
 import React from 'react';
 import './FeedbackSlider.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { Autoplay } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 const feedbacks = [
   {
@@ -37,7 +38,20 @@ const FeedbackSlider = () => {
           disableOnInteraction: false
         }}
         speed={1000} // Adjust speed for smoother scrolling
-        modules={[Autoplay]} // Use the modules prop to include Autoplay
+        modules={[Autoplay, Navigation, Pagination]} // Include Navigation and Pagination modules
+        navigation
+        pagination={{ clickable: true }}
+        breakpoints={{
+          1024: {
+            slidesPerView: feedbacks.length,
+            spaceBetween: 30,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false
+            },
+            speed: 4000 // Slow speed for desktop view
+          }
+        }}
       >
         {feedbacks.map((feedback, index) => (
           <SwiperSlide key={index}>
