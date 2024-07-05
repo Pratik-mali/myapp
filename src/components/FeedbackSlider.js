@@ -4,9 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 const feedbacks = [
   {
@@ -38,12 +37,11 @@ const FeedbackSlider = () => {
           disableOnInteraction: false
         }}
         speed={1000} // Adjust speed for smoother scrolling
-        modules={[Autoplay, Navigation, Pagination]} // Include Navigation and Pagination modules
-        navigation
+        modules={[Autoplay, Pagination]} // Use the modules prop to include Autoplay and Pagination
         pagination={{ clickable: true }}
         breakpoints={{
           1024: {
-            slidesPerView: feedbacks.length,
+            slidesPerView: 3,
             spaceBetween: 30,
             autoplay: {
               delay: 3000,
