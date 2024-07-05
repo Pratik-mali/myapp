@@ -32,9 +32,7 @@ const BusinessComponent = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollToTop(window.pageYOffset > 300);
-    };
+  
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -60,9 +58,7 @@ const BusinessComponent = () => {
     document.getElementById('templates-section').scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+
 
   const filteredTemplates = selectedCategory === 'All'
     ? templates
