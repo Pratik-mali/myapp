@@ -35,23 +35,23 @@
   height: 140px;
 }
 
-
-
-
-
 .self-assess-button {
+  display: flex;
+  align-items: center;
   background-color: #239412;
   color: #ffffff;
   padding: 5px;
-
   border-radius: 5px;
-  
   text-decoration: none;
   font-weight: bold;
 }
 
 .self-assess-button:hover {
   background-color: #134d0a;
+}
+
+.whatsapp-icon {
+  margin-right: 5px;
 }
 
 /* Styling for the hamburger icon */
