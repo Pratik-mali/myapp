@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 import './Navbar.css';
 
 const Navbar = () => {
@@ -45,7 +44,7 @@ const Navbar = () => {
           <Link to="/terms" onClick={closeMenu}>Terms & Conditions</Link>
         </div>
         <Link to="/image-templates" className="self-assess-button" onClick={closeMenu}>
-          <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" /> Wedding Groups
+          <i className="fab fa-whatsapp"></i> Wedding Groups
         </Link>
         <button
           className={`hamburger ${isOpen ? 'open' : ''}`}
