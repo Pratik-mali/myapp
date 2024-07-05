@@ -61,7 +61,7 @@ const BusinessComponent = () => {
           <div className="hero-text">
             <h1>प्रभावी बायोडाटा सेवांसाठी तुमची पहिली पसंती! <br></br>'mazabiodata.com'</h1>
             <p>Find and customize the perfect template for your needs</p>
-    <dev className="myButtons">
+    <div className="myButtons">
             <button className="scroll-button" onClick={handleScrollToTemplates}>Explore Templates</button>
     </div>
     <div className="myButton">
