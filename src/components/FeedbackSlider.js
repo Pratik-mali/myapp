@@ -22,6 +22,11 @@ const feedbacks = [
     text: 'Sandra brings a critically necessary, thoughtful, and integrative approach to psychedelic ethics. Her teachings both inspire and provoke important discussions on what it means to hold a safe and responsible container for individual and group integration.',
     name: 'Amanda Argot Efthimiou',
     title: 'Co-Founder, Reciproc Method'
+  },
+    {
+    text: 'Working alongside Sandra has been an enriching experience, filled with deep insights and profound healing. Her dedication to ethical practice and holistic well-being shines through in every interaction, making her an indispensable asset in the psychedelic therapy field.',
+    name: 'Laurie Smith',
+    title: 'Psychedelic Artist'
   }
 ];
 
