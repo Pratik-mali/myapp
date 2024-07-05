@@ -1,6 +1,6 @@
 /* General styling for the container */
 .business-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   margin-top: 5rem;
   padding: 0px;
@@ -12,6 +12,8 @@
 .about-section {
   background: #f9f9f9;
   padding: 20px;
+  width:80%;
+  margin:0 auto;
   border-radius: 10px;
   margin-bottom: 40px;
   text-align: center;
