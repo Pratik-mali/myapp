@@ -2,7 +2,7 @@
 
 /* General styling for the container */
 .business-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
   font-family: 'Arial', sans-serif;
@@ -74,6 +74,8 @@
 .about-section {
   background: #f9f9f9;
   padding: 20px;
+  width:80%;
+  margin-left:10%;
   border-radius: 10px;
   margin-bottom: 40px;
   text-align: center;
@@ -89,6 +91,8 @@
 .templates-section {
   background: #ffffff;
   padding: 0px;
+  width:80%;
+  margin-left:10%
   border-radius: 10px;
   margin-bottom: 40px;
 }
