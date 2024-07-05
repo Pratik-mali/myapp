@@ -62,6 +62,9 @@ const BusinessComponent = () => {
             <h1>प्रभावी बायोडाटा सेवांसाठी तुमची पहिली पसंती! <br></br>'mazabiodata.com'</h1>
             <p>Find and customize the perfect template for your needs</p>
             <button className="scroll-button" onClick={handleScrollToTemplates}>Explore Templates</button>
+            <button className="scroll-button" onClick={handleScrollToTemplates}>With Photo</button>
+            <button className="scroll-button" onClick={handleScrollToTemplates}>Without Photo</button>
+            
           </div>
           <img src="/starr.png" alt="Rotating" className="rotating-image" />
         </div>
