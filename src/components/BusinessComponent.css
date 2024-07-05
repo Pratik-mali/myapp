@@ -307,13 +307,15 @@
 
 .scroll-button:hover {
   background-color: #9c0564;
+  color: white;
+  
 }
 
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ff6600;
+  background-color: #5e2f63;
   color: white;
   border: none;
   padding: 10px 15px;
