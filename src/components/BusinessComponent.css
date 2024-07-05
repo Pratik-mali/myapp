@@ -8,7 +8,12 @@
   font-family: 'Arial', sans-serif;
   color: #333;
 }
+.myButton {
 
+  display:flex;
+  felx-direction:row;
+  width:100%;
+}
 /* Hero section styling */
 .hero-section {
   position: relative;
@@ -78,7 +83,7 @@
   margin-left:10%;
   border-radius: 10px;
   margin-bottom: 40px;
-  text-align: center;
+  text-align: justify;
 }
 
 .about-section p {
