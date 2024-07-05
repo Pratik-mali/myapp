@@ -59,7 +59,7 @@ const BusinessComponent = () => {
       <section className="hero-section">
         <div className="hero-image">
           <div className="hero-text">
-            <h1>प्रभावी बायोडाटा सेवांसाठी तुमची पहिली पसंती! <br></br>'mazabiodata.com'</h1>
+            <h1>बायोडेटा साठी प्रत्येकाची पहिली पसंती! <br></br>'mazabiodata.com'</h1>
             <p>Find and customize the perfect template for your needs</p>
   
     <div className="myButton">
