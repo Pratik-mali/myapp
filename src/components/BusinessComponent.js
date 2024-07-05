@@ -8,7 +8,6 @@ const BusinessComponent = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [previewTemplate, setPreviewTemplate] = useState(null);
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   const templates = [
     { id: 1, category: 'Hindu', imageUrl: './Marriage Biodata Template-01.png', bestSeller: true },
