@@ -111,7 +111,7 @@ const BusinessComponent = () => {
         </div>
         <div className="template-options">
           {filteredTemplates.map((template) => (
-            <div key={template.id} className="template-option">
+            <div key={template.id} className="template-option" onClick={() => handlePreviewClick(template)}>
               {template.bestSeller && <div className="best-seller">Best Seller</div>}
               <img src={template.imageUrl} alt={`Template ${template.id}`} />
               <p className="template-description"> Temp {template.id}.</p>
