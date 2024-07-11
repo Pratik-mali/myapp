@@ -1,0 +1,247 @@
+.input-form-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 7rem;
+}
+
+.form-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.image-upload {
+  text-align: center;
+}
+
+.image-label {
+  cursor: pointer;
+  color: blue;
+}
+
+.center-text-input {
+  margin-top: 10px;
+  text-align: center;
+  width: 80%;
+}
+
+.center-text-input input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex: 1 1 48%;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+select {
+  width: calc(100% - 8px);
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #007bff; /* Added button color */
+}
+
+button:hover {
+  background-color: #0056b3; /* Added button hover color */
+}
+
+.date-time-select,
+.date-select,
+.time-select {
+  display: flex;
+  gap: 10px;
+}
+
+.date-time-select select,
+.date-select select,
+.time-select select {
+  flex: 1;
+}
+
+.add-button {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 12px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 100px;
+}
+
+.add-button:hover {
+  background-color: #e68900;
+}
+
+.translation-hint {
+  display: none;
+  cursor: pointer;
+  color: blue;
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 0;
+}
+
+input:focus + .translation-hint,
+select:focus + .translation-hint {
+  display: block;
+}
+
+.multiple-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 48%;
+}
+
+.multiple-input-container input {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.translation-hint-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.translation-hint {
+  cursor: pointer;
+  color: blue;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.more-button {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 12px;
+  background-color: #00ff1e;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 40px;
+  width: 90px;
+}
+
+.more-button:hover {
+  background-color: #00cc16;
+}
+
+.date-select,
+.time-select {
+  width: 100%;
+}
+
+.apple {
+  display: flex;
+  flex-direction: row;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #eee;
+}
