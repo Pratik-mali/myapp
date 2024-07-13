@@ -8,36 +8,36 @@ const InputFormPage = () => {
   const { templateId } = useParams();
 
   const [formData, setFormData] = useState({
-    नाव: { value: "", type: "text", titleOptions: ["नाव", "Name"] },
-    जन्मतारीख: { day: "", month: "", year: "", type: "date", titleOptions: ["जन्मतारीख", "Birth Date"] },
-    जन्मवेळ: { hour: "", minute: "", period: "", type: "time", titleOptions: ["जन्मवेळ", "Birth Time"] },
-    जन्मस्थान: { value: "", type: "text", titleOptions: ["जन्मस्थान", "Birth Place"] },
-    जन्मनाव: { value: "", type: "text", titleOptions: ["जन्मनाव", "Birth Name"] },
-    धर्म: { value: "", type: "text", titleOptions: ["धर्म", "Religion"] },
-    जात: { value: "", type: "text", titleOptions: ["जात", "Caste"] },
-    कुलदैवत: { value: "", type: "text", titleOptions: ["कुलदैवत", "Family Deity"] },
-    गोत्र: { value: "", type: "select", titleOptions: ["गोत्र", "Gotra"] },
-    नक्षत्र: { value: "", type: "select", titleOptions: ["नक्षत्र", "Nakshatra"] },
-    राशी: { value: "", type: "select", titleOptions: ["राशी", "Rashi"] },
-    गण: { value: "", type: "select", titleOptions: ["गण", "Gan"] },
-    नाडी: { value: "", type: "select", titleOptions: ["नाडी", "Nadi"] },
-    ऊंची: { value: "", type: "select", titleOptions: ["ऊंची", "Height"] },
-    रंग: { value: "", type: "select", titleOptions: ["रंग", "Complexion"] },
-    रक्तगट: { value: "", type: "select", titleOptions: ["रक्तगट", "Blood Group"] },
-    शिक्षण: { value: "", type: "text", titleOptions: ["शिक्षण", "Education"] },
-    नोकरी: { value: "", type: "text", titleOptions: ["नोकरी", "Job"] },
-    पगार: { value: "", type: "text", titleOptions: ["पगार", "Salary"] },
-    वडिलांचे_नाव: { value: "", type: "text", titleOptions: ["वडिलांचे_नाव", "Father's Name"] },
-    वडिलांचा_व्यवसाय: { value: "", type: "text", titleOptions: ["वडिलांचा_व्यवसाय", "Father's Occupation"] },
-    आईचे_नाव: { value: "", type: "text", titleOptions: ["आईचे_नाव", "Mother's Name"] },
-    बहीण: [{ value: "", type: "text", titleOptions: ["बहीण", "Sister"] }],
-    भाऊ: [{ value: "", type: "text", titleOptions: ["भाऊ", "Brother"] }],
-    मामा: [{ value: "", type: "text", titleOptions: ["मामा", "Maternal Uncle"] }],
-    दाजी: [{ value: "", type: "text", titleOptions: ["दाजी", "Father's Sister's Husband"] }],
-    चूलते: [{ value: "", type: "text", titleOptions: ["चूलते", "Father's Brother"] }],
-    नातेसंबंध: { value: "", type: "text", titleOptions: ["नातेसंबंध", "Relationship"] },
-    पत्ता: { value: "", type: "text", titleOptions: ["पत्ता", "Address"] },
-    संपर्क: { value: "", type: "tel", titleOptions: ["संपर्क", "Contact"] },
+    नाव: { value: "", type: "text", titleOptions: ["नाव", "मुलाचे नाव", "मुलीचे नाव"] },
+    जन्मतारीख: { day: "", month: "", year: "", type: "date", titleOptions: ["जन्मतारीख", "जन्मदिनांक"] },
+    जन्मवेळ: { hour: "", minute: "", period: "", type: "time" },
+    जन्मस्थान: { value: "", type: "text", titleOptions: ["जन्म स्थान", "जन्म ठिकाण"] },
+    जन्मनाव: { value: "", type: "text", titleOptions: ["जन्मनाव", "नावरस नाव", "रास नाव"] },
+    धर्म: { value: "", type: "text", titleOptions: ["धर्म"] },
+    जात: { value: "", type: "text", titleOptions: ["जात"] },
+    कुलदैवत: { value: "", type: "text", titleOptions: ["कुलदैवत"] },
+    गोत्र: { value: "", type: "select", titleOptions: ["गोत्र"] },
+    नक्षत्र: { value: "", type: "select", titleOptions: ["नक्षत्र"] },
+    राशी: { value: "", type: "select", titleOptions: ["राशी"] },
+    गण: { value: "", type: "select", titleOptions: ["गण"] },
+    नाडी: { value: "", type: "select", titleOptions: ["नाडी"] },
+    ऊंची: { value: "", type: "select", titleOptions: ["ऊंची"] },
+    रंग: { value: "", type: "select", titleOptions: ["रंग", "वर्ण"] },
+    रक्तगट: { value: "", type: "select", titleOptions: ["रक्तगट"] },
+    शिक्षण: { value: "", type: "text", titleOptions: ["शिक्षण"] },
+    नोकरी: { value: "", type: "text", titleOptions: ["नोकरी"] },
+    पगार: { value: "", type: "text", titleOptions: ["पगार"] },
+    वडिलांचे_नाव: { value: "", type: "text", titleOptions: ["वडिलांचे_नाव"] },
+    वडिलांचा_व्यवसाय: { value: "", type: "text", titleOptions: ["वडिलांचा_व्यवसाय"] },
+    आईचे_नाव: { value: "", type: "text", titleOptions: ["आईचे_नाव"] },
+    बहीण: [{ value: "", type: "text", titleOptions: ["बहीण"] }],
+    भाऊ: [{ value: "", type: "text", titleOptions: ["भाऊ"] }],
+    मामा: [{ value: "", type: "text", titleOptions: ["मामा"] }],
+    दाजी: [{ value: "", type: "text", titleOptions: ["दाजी"] }],
+    चूलते: [{ value: "", type: "text", titleOptions: ["चूलते"] }],
+    नातेसंबंध: { value: "", type: "text", titleOptions: ["नातेसंबंध"] },
+    पत्ता: { value: "", type: "text", titleOptions: ["पत्ता"] },
+    संपर्क: { value: "", type: "tel", titleOptions: ["संपर्क"] },
   });
 
   const [imagePreview, setImagePreview] = useState("/ganesha.png");
@@ -152,7 +152,17 @@ const InputFormPage = () => {
   const years = Array.from({ length: 100 }, (_, i) => new Date().getFullYear() - i);
   const hours = Array.from({ length: 12 }, (_, i) => i + 1);
   const minutes = Array.from({ length: 60 }, (_, i) => i);
-  const periods = ["सकाळ", "दुपार", "संध्याकाळ", "रात्र"];
+  const periods = ["पहाटे", "सकाळ", "दुपार", "संध्याकाळ", "रात्र"];
+
+  // Dropdown options for specific fields
+  const bloodGroups = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
+  const heights = ["4'0\"", "4'1\"", "4'2\"", "4'3\"", "4'4\"", "4'5\"", "4'6\"", "4'7\"", "4'8\"", "4'9\"", "4'10\"", "4'11\"", "5'0\"", "5'1\"", "5'2\"", "5'3\"", "5'4\"", "5'5\"", "5'6\"", "5'7\"", "5'8\"", "5'9\"", "5'10\"", "5'11\"", "6'0\"", "6'1\"", "6'2\"", "6'3\"", "6'4\"", "6'5\"", "6'6\"", "6'7\"", "6'8\"", "6'9\"", "6'10\"", "6'11\"", "7'0\""];
+  const nadis = ["आदि", "मध्य", "अन्त"];
+  const gans = ["देव", "मानव", "राक्षस"];
+  const rashis = ["मेष", "वृषभ", "मिथुन", "कर्क", "सिंह", "कन्या", "तुला", "वृश्चिक", "धनु", "मकर", "कुंभ", "मीन"];
+  const nakshatras = ["अश्विनी", "भरणी", "कृत्तिका", "रोहिणी", "मृगशीर्ष", "आर्द्रा", "पुनर्वसु", "पुष्य", "आश्लेषा", "मघा", "पूर्वाफाल्गुनी", "उत्तराफाल्गुनी", "हस्त", "चित्रा", "स्वाति", "विशाखा", "अनुराधा", "ज्येष्ठा", "मूल", "पूर्वाषाढा", "उत्तराषाढा", "श्रवण", "धनिष्ठा", "शतभिषा", "पूर्वाभाद्रपद", "उत्तराभाद्रपद", "रेवती"];
+  const gotras = ["अत्रि", "कश्यप", "भारद्वाज", "गौतम", "वशिष्ठ", "विश्वामित्र", "जमदग्नि", "विष्णु", "अंगिरस", "पुलस्त्य", "पुलह", "क्रतु", "मरीचि", "शांडिल्य"];
+  const colors = ["गोर", "सांवळा", "गहू", "काळा"];
 
   return (
     <div
@@ -195,13 +205,17 @@ const InputFormPage = () => {
           if (fieldData.type === "date") {
             return (
               <div key={field} className="form-group date-select">
-                <label>
-                  <select name={`${field}-title`} value={fieldData.title} onChange={handleChange}>
-                    {titleOptions.map((title, index) => (
-                      <option key={index} value={title}>{title}</option>
-                    ))}
-                  </select>
-                </label>
+                {titleOptions.length > 1 ? (
+                  <label>
+                    <select name={`${field}-title`} value={fieldData.title} onChange={handleChange}>
+                      {titleOptions.map((title, index) => (
+                        <option key={index} value={title}>{title}</option>
+                      ))}
+                    </select>
+                  </label>
+                ) : (
+                  <label>{titleOptions[0]}</label>
+                )}
                 <div className="date-time-select">
                   <select
                     name={`${field}-day`}
@@ -245,13 +259,17 @@ const InputFormPage = () => {
           } else if (fieldData.type === "time") {
             return (
               <div key={field} className="form-group time-select">
-                <label>
-                  <select name={`${field}-title`} value={fieldData.title} onChange={handleChange}>
-                    {titleOptions.map((title, index) => (
-                      <option key={index} value={title}>{title}</option>
-                    ))}
-                  </select>
-                </label>
+                {titleOptions.length > 1 ? (
+                  <label>
+                    <select name={`${field}-title`} value={fieldData.title} onChange={handleChange}>
+                      {titleOptions.map((title, index) => (
+                        <option key={index} value={title}>{title}</option>
+                      ))}
+                    </select>
+                  </label>
+                ) : (
+                  <label>{titleOptions[0]}</label>
+                )}
                 <div className="date-time-select">
                   <select
                     name={`${field}-hour`}
@@ -292,60 +310,205 @@ const InputFormPage = () => {
                 </div>
               </div>
             );
-          } else if (Array.isArray(fieldData)) {
+          } else if (field === "रक्तगट") {
             return (
-              <div key={field} className="multiple-input-container">
-                <label>
-                  <select name={`${field}-title`} value={fieldData.title} onChange={handleChange}>
-                    {titleOptions.map((title, index) => (
-                      <option key={index} value={title}>{title}</option>
-                    ))}
-                  </select>
-                </label>
-                {fieldData.map((item, index) => (
-                  <div key={index} className="input-group">
-                    <TransliterationInput
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  {bloodGroups.map((bloodGroup, index) => (
+                    <option key={index} value={bloodGroup}>
+                      {bloodGroup}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          } else if (field === "ऊंची") {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  {heights.map((height, index) => (
+                    <option key={index} value={height}>
+                      {height}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          } else if (field === "नाडी") {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  {nadis.map((nadi, index) => (
+                    <option key={index} value={nadi}>
+                      {nadi}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          } else if (field === "गण") {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  {gans.map((gan, index) => (
+                    <option key={index} value={gan}>
+                      {gan}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          } else if (field === "राशी") {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  {rashis.map((rashi, index) => (
+                    <option key={index} value={rashi}>
+                      {rashi}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          } else if (field === "नक्षत्र") {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  {nakshatras.map((nakshatra, index) => (
+                    <option key={index} value={nakshatra}>
+                      {nakshatra}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          } else if (field === "गोत्र") {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  {gotras.map((gotra, index) => (
+                    <option key={index} value={gotra}>
+                      {gotra}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          } else if (field === "रंग") {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  {colors.map((color, index) => (
+                    <option key={index} value={color}>
+                      {color}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          } else if (Array.isArray(formData[field])) {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                {formData[field].map((item, index) => (
+                  <div key={index} className="array-item">
+                    <input
+                      type="text"
+                      name={`${field}-${index}`}
                       value={item.value}
-                      onChange={(value) =>
-                        handleArrayChange(
-                          { target: { value } },
-                          index,
-                          field
-                        )
-                      }
+                      onChange={(e) => handleArrayChange(e, index, field)}
                     />
-                    <button
-                      type="button"
-                      className="add-button"
-                      onClick={() => handleAddField(field)}
-                    >
-                      +
-                    </button>
                   </div>
                 ))}
+                <button type="button" onClick={() => handleAddField(field)}>
+                  Add {field}
+                </button>
+              </div>
+            );
+          } else if (field === "संपर्क") {
+            return (
+              <div key={field} className="form-group">
+                <label>{titleOptions[0]}</label>
+                <input
+                  type="tel"
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                />
               </div>
             );
           } else {
             return (
               <div key={field} className="form-group">
-                <label>
-                  <select name={`${field}-title`} value={fieldData.title} onChange={handleChange}>
-                    {titleOptions.map((title, index) => (
-                      <option key={index} value={title}>{title}</option>
-                    ))}
-                  </select>
-                </label>
+                {titleOptions.length > 1 ? (
+                  <label>
+                    <select name={`${field}-title`} value={fieldData.title} onChange={handleChange}>
+                      {titleOptions.map((title, index) => (
+                        <option key={index} value={title}>{title}</option>
+                      ))}
+                    </select>
+                  </label>
+                ) : (
+                  <label>{titleOptions[0]}</label>
+                )}
                 <TransliterationInput
                   value={fieldData.value}
-                  onChange={(value) =>
-                    handleTransliterationChange(field, value)
-                  }
+                  onChange={(value) => handleTransliterationChange(field, value)}
+                  placeholder={titleOptions[0]}
                 />
               </div>
             );
           }
         })}
-        <button type="submit">Submit</button>
+        <button type="submit">Preview</button>
       </form>
     </div>
   );
