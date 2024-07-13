@@ -245,3 +245,6 @@ select:focus + .translation-hint {
 .suggestions li:hover {
   background-color: #eee;
 }
+label selct {
+  border: none;
+}
