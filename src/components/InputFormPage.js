@@ -163,6 +163,17 @@ const InputFormPage = () => {
   const minutes = Array.from({ length: 60 }, (_, i) => i);
   const periods = ["पहाटे", "सकाळ", "दुपार", "संध्याकाळ", "रात्र"];
 
+  const selectOptions = {
+    रंग: ["गोरापान", "गोरा", "गव्हाळ", "तांबूस", "सावळा", "काळा"],
+    रक्तगट: ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],
+    ऊंची: ["4'0\"", "4'1\"", "4'2\"", "4'3\"", "4'4\"", "4'5\"", "4'6\"", "4'7\"", "4'8\"", "4'9\"", "4'10\"", "4'11\"", "5'0\"", "5'1\"", "5'2\"", "5'3\"", "5'4\"", "5'5\"", "5'6\"", "5'7\"", "5'8\"", "5'9\"", "5'10\"", "5'11\"", "6'0\"", "6'1\"", "6'2\"", "6'3\"", "6'4\"", "6'5\"", "6'6\"", "6'7\"", "6'8\"", "6'9\"", "6'10\"", "6'11\"", "7'0\""],
+    नाडी: ["आदि", "मध्य", "अन्त्य"],
+    गण: ["देव", "मनुष्य", "राक्षस"],
+    राशी: ["मेष", "वृषभ", "मिथुन", "कर्क", "सिंह", "कन्या", "तुला", "वृश्चिक", "धनु", "मकर", "कुंभ", "मीन"],
+    नक्षत्र: ["अश्विनी", "भरणी", "कृत्तिका", "रोहिणी", "मृगशिरा", "आर्द्रा", "पुनर्वसु", "पुष्य", "आश्रेषा", "मघा", "पूर्वाफाल्गुनी", "उत्तराफाल्गुनी", "हस्त", "चित्रा", "स्वाती", "विशाखा", "अनुराधा", "ज्येष्ठा", "मूला", "पूर्वाषाढा", "उत्तराषाढा", "श्रवण", "धनिष्ठा", "शततारका", "पूर्वाभाद्रपद", "उत्तराभाद्रपद", "रेवती"],
+    गोत्र: ["कश्यप", "भारद्वाज", "अत्रि", "वशिष्ठ", "विश्वामित्र", "जमदग्नि", "गौतम", "शांडिल्य"]
+  };
+
   return (
     <div
       className="input-form-container"
@@ -350,6 +361,32 @@ const InputFormPage = () => {
                     </button>
                   </div>
                 ))}
+              </div>
+            );
+          } else if (fieldData.type === "select" && selectOptions[field]) {
+            return (
+              <div key={field} className="form-group">
+                {titleOptions.length > 1 ? (
+                  <label>
+                    <select name={`${field}-title`} value={fieldData.title} onChange={handleChange}>
+                      {titleOptions.map((title, index) => (
+                        <option key={index} value={title}>{title}</option>
+                      ))}
+                    </select>
+                  </label>
+                ) : (
+                  <label>{titleOptions[0]}</label>
+                )}
+                <select
+                  name={field}
+                  value={fieldData.value}
+                  onChange={handleChange}
+                >
+                  <option value="">Select {field}</option>
+                  {selectOptions[field].map((option, index) => (
+                    <option key={index} value={option}>{option}</option>
+                  ))}
+                </select>
               </div>
             );
           } else {
