@@ -44,6 +44,7 @@ const InputFormPage = () => {
   const [additionalImage, setAdditionalImage] = useState(null);
   const [centerText, setCenterText] = useState("|| श्री गणेशाय नम: ||");
   const [bioDataType, setBioDataType] = useState("");
+  const [missingFields, setMissingFields] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -100,19 +101,45 @@ const InputFormPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const completeFormData = {
-      ...formData,
-      बायोडेटाप्रकार: { value: bioDataType, type: "select" },
-    };
-    navigate("/preview", {
-      state: {
-        formData: completeFormData,
-        templateId,
-        imagePreview,
-        additionalImage,
-        centerText,
-      },
-    });
+    const requiredFields = Object.entries(formData)
+      .filter(([key]) => !["चूलते", "दाजी", "भाऊ", "बहीण", "मामा"].includes(key))
+      .map(([key, value]) => {
+        if (value.type === "date") {
+          return {
+            key,
+            isValid: value.day && value.month && value.year
+          };
+        } else if (value.type === "time") {
+          return {
+            key,
+            isValid: value.hour && value.minute && value.period
+          };
+        } else {
+          return {
+            key,
+            isValid: !!value.value
+          };
+        }
+      });
+
+    const missing = requiredFields.filter(field => !field.isValid).map(field => field.key);
+    if (missing.length > 0) {
+      setMissingFields(missing);
+    } else {
+      const completeFormData = {
+        ...formData,
+        बायोडेटाप्रकार: { value: bioDataType, type: "select" },
+      };
+      navigate("/preview", {
+        state: {
+          formData: completeFormData,
+          templateId,
+          imagePreview,
+          additionalImage,
+          centerText,
+        },
+      });
+    }
   };
 
   const handleTransliterationChange = (field, value) => {
@@ -164,9 +191,9 @@ const InputFormPage = () => {
   const periods = ["पहाटे", "सकाळ", "दुपार", "संध्याकाळ", "रात्र"];
 
   const selectOptions = {
-    रंग: ["गोरापान", "गोरा", "गव्हाळ", "तांबूस", "सावळा", "काळा"],
-    रक्तगट: ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],
-    ऊंची: ["4'0\"", "4'1\"", "4'2\"", "4'3\"", "4'4\"", "4'5\"", "4'6\"", "4'7\"", "4'8\"", "4'9\"", "4'10\"", "4'11\"", "5'0\"", "5'1\"", "5'2\"", "5'3\"", "5'4\"", "5'5\"", "5'6\"", "5'7\"", "5'8\"", "5'9\"", "5'10\"", "5'11\"", "6'0\"", "6'1\"", "6'2\"", "6'3\"", "6'4\"", "6'5\"", "6'6\"", "6'7\"", "6'8\"", "6'9\"", "6'10\"", "6'11\"", "7'0\""],
+    रंग: ["गोरापान", "गोरा", "गहूवर्णीय", "सावळा", "काळा"],
+    रक्तगट: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"],
+    ऊंची: ["4'5\"", "4'6\"", "4'7\"", "4'8\"", "4'9\"", "4'10\"", "4'11\"", "5'0\"", "5'1\"", "5'2\"", "5'3\"", "5'4\"", "5'5\"", "5'6\"", "5'7\"", "5'8\"", "5'9\"", "5'10\"", "5'11\"", "6'0\"", "6'1\"", "6'2\"", "6'3\"", "6'4\"", "6'5\"", "6'6\"", "6'7\"", "6'8\"", "6'9\"", "6'10\"", "6'11\"", "7'0\""],
     नाडी: ["आदि", "मध्य", "अन्त्य"],
     गण: ["देव", "मनुष्य", "राक्षस"],
     राशी: ["मेष", "वृषभ", "मिथुन", "कर्क", "सिंह", "कन्या", "तुला", "वृश्चिक", "धनु", "मकर", "कुंभ", "मीन"],
@@ -405,16 +432,26 @@ const InputFormPage = () => {
                 )}
                 <TransliterationInput
                   value={fieldData.value}
-                  onChange={(value) =>
-                    handleTransliterationChange(field, value)
-                  }
+                  onChange={(value) => handleTransliterationChange(field, value)}
                 />
               </div>
             );
           }
         })}
-        <button type="submit">Submit</button>
+        <button type="submit">Preview</button>
       </form>
+      {missingFields.length > 0 && (
+        <div className="popup">
+          <p>Missing Fields </p>
+       
+       
+            {missingFields.map((field, index) => (
+              <p key={index}>{field},</p>
+            ))}
+  
+          <button onClick={() => setMissingFields([])}>Close</button>
+        </div>
+      )}
     </div>
   );
 };
