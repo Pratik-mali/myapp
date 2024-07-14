@@ -249,3 +249,72 @@ select:focus + .translation-hint {
 label select {
   border: none;
 }
+
+/* Add this CSS to your existing CSS file */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffdddd; /* Light red background */
+  border: 1px solid #f44336; /* Red border */
+  color: #f44336; /* Red text color */
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 50%; /* Adjust width as needed */
+  text-align: left; /* Left align text */
+  display: ruby;
+  align-items: center;
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.popup p {
+  margin: 0;
+}
+
+.popup-content {
+  margin-left: 10px;
+}
+
+.popup-content h2 {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.popup-content p {
+  font-size: 0.9em;
+}
+
+.popup-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #f44336;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.popup button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #d32f2f;
+}
