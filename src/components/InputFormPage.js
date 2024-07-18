@@ -1,13 +1,20 @@
-import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import TransliterationInput from "./TransliterationInput";
 import "./InputFormPage.css";
 
 const InputFormPage = () => {
   const navigate = useNavigate();
   const { templateId } = useParams();
-
-  const [formData, setFormData] = useState({
+  const location = useLocation();
+  const initialFormData = location.state?.initialFormData; // Ensure this line exists and correctly references the passed state
+  console.log(initialFormData);
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  const [formData, setFormData] = useState(initialFormData || {
     नाव: { value: "", type: "text", titleOptions: ["नाव", "मुलाचे नाव", "मुलीचे नाव"] },
     जन्मतारीख: { day: "", month: "", year: "", type: "date", titleOptions: ["जन्मतारीख", "जन्मदिनांक"] },
     जन्मवेळ: { hour: "", minute: "", period: "", type: "time" },
@@ -39,6 +46,7 @@ const InputFormPage = () => {
     पत्ता: { value: "", type: "text", titleOptions: ["पत्ता"] },
     संपर्क: { value: "", type: "tel", titleOptions: ["संपर्क"] },
   });
+  
 
   const [imagePreview, setImagePreview] = useState("/ganesha.png");
   const [additionalImage, setAdditionalImage] = useState(null);
