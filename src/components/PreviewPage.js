@@ -1,5 +1,7 @@
+// PreviewPage.js
+
 import React, { useEffect, useRef, useCallback, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import { pdf } from '@react-pdf/renderer';
 import './PreviewPage.css';
@@ -7,6 +9,7 @@ import PDFDocument from './PDFDocument'; // Adjust the path as needed
 
 const PreviewPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { formData, templateId: initialTemplateId, imagePreview, centerText, additionalImage } = location.state;
   const [templateId, setTemplateId] = useState(initialTemplateId);
   const canvasRef = useRef(null);
@@ -19,36 +22,6 @@ const PreviewPage = () => {
         return "Marriage Biodata Template-02.png";
       case "3":
         return "Marriage Biodata Template-03.png";
-      case "4":
-        return "Marriage Biodata Template-04.png";
-      case "5":
-        return "Marriage Biodata Template-05.png";
-      case "6":
-        return "Marriage Biodata Template-06.png";
-      case "7":
-        return "Marriage Biodata Template-07.png";
-      case "8":
-        return "Marriage Biodata Template-08.png";
-      case "9":
-        return "Marriage Biodata Template-09.png";
-      case "10":
-        return "Marriage Biodata Template-10.png";
-      case "11":
-        return "Marriage Biodata Template-11.png";
-      case "12":
-        return "Marriage Biodata Template-12.png";
-      case "13":
-        return "Marriage Biodata Template-13.png";
-      case "14":
-        return "Marriage Biodata Template-14.png";
-      case "15":
-        return "Marriage Biodata Template-15.png";
-      case "16":
-        return "Marriage Biodata Template-16.png";
-      case "17":
-        return "Marriage Biodata Template-17.png";
-      case "18":
-        return "Marriage Biodata Template-18.png";
       default:
         return "border.png";
     }
@@ -61,9 +34,8 @@ const PreviewPage = () => {
     backgroundImage.src = getBackgroundImage();
 
     const loadBackgroundImage = () => {
-      canvas.width = 595; // A4 width in points (8.27 inches * 72 DPI)
-      canvas.height = 900; // A4 height in points (11.69 inches * 72 DPI)
-
+      canvas.width = 595;
+      canvas.height = 900;
       ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
       ctx.font = '15px Sans-serif';
       ctx.fillStyle = 'black';
@@ -122,7 +94,7 @@ const PreviewPage = () => {
       }
 
       for (const [key, value] of Object.entries(formData)) {
-        const title = value.title || key; // Use the title if provided, otherwise use the key
+        const title = value.title || key;
         switch (key) {
           case 'नाव':
             drawText(title, value.value);
@@ -228,6 +200,19 @@ const PreviewPage = () => {
     a.click();
   };
 
+  const handleEditClick = () => {
+    navigate('/input-form/1', {
+      state: {
+        initialFormData: formData, // change from formData to initialFormData
+        imagePreview,
+        centerText,
+        additionalImage,
+        templateId
+      }
+    });
+  };
+  
+
   return (
     <div className="preview-container">
       <h1>Preview for Template {templateId}</h1>
@@ -235,6 +220,7 @@ const PreviewPage = () => {
       <div className="buttons-container">
         <button onClick={() => downloadPDF(true)}>Download with Watermark</button>
         <button onClick={handlePaymentAndDownload}>Remove Watermark and Download</button>
+        <button onClick={handleEditClick}>Edit Data</button>
       </div>
       <div className="template-selection">
         <img
