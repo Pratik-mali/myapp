@@ -1,0 +1,163 @@
+/* General styling for the navbar */
+.navbar {
+  background-color: #511c3b;
+  padding: 0px 0px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s;
+}
+
+.navbar.hidden {
+  top: -100px;
+}
+
+.navbar.visible {
+  top: 0;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 140px;
+}
+
+.self-assess-button {
+  display: flex;
+  align-items: center;
+  background-color: #239412;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.self-assess-button:hover {
+  background-color: #134d0a;
+}
+
+.whatsapp-icon {
+  margin-right: 5px;
+}
+
+/* Styling for the hamburger icon */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  margin-left: 10px;
+  margin-right: 35px;
+  width: 10%;
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  display: block;
+  position: relative;
+  left: 80%;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-icon::before {
+  top: -10px;
+}
+
+.hamburger-icon::after {
+  top: 10px;
+}
+
+.hamburger.open .hamburger-icon {
+  transform: rotate(45deg);
+}
+
+.hamburger.open .hamburger-icon::before {
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+.hamburger.open .hamburger-icon::after {
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+/* Desktop menu */
+.navbar-menu-desktop {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu-desktop a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-menu-desktop a:hover {
+  color: #ff7300;
+  transform: scale(1.1);
+}
+
+/* Mobile menu */
+.navbar-menu-mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #511c3b;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu-mobile.open {
+  display: flex;
+}
+
+.navbar-menu-mobile a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0.8rem 0;
+  width: 90%;
+  border-bottom:1px solid white;
+  margin-left: 5%;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu-desktop {
+    display: none;
+  }
+}
