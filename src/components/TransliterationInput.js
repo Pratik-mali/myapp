@@ -1,4 +1,3 @@
-// src/TransliterationInput.js
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
@@ -22,8 +21,7 @@ const TransliterationInput = ({ value, onChange, placeholder }) => {
 
     if (lastWord) {
       try {
-        const response = await axios.post('https://2t5fde13-o6moa0ss-ou70ajnjwf63.ac1-preview.marscode.dev/suggestions'
-            , { text: lastWord });
+        const response = await axios.get(`https://2t5fde13-o6moa0ss-ou70ajnjwf63.ac1-preview.marscode.dev/transliterate?text=${lastWord}&lang_code=hi`);
         setSuggestions(response.data.suggestions);
         setShowSuggestions(true);
       } catch (error) {
@@ -100,7 +98,7 @@ const TransliterationInput = ({ value, onChange, placeholder }) => {
                 cursor: 'pointer',
                 backgroundColor: index === activeSuggestionIndex ? '#f0f0f0' : 'white'
               }}
-              onMouseDown={() => handleSuggestionClick(suggestion)}
+              onClick={() => handleSuggestionClick(suggestion)}
             >
               {suggestion}
             </li>
