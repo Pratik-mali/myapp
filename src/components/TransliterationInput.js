@@ -22,7 +22,7 @@ const TransliterationInput = ({ value, onChange, placeholder }) => {
 
     if (lastWord) {
       try {
-        const response = await axios.post('https://cdb2e4d0-3641-402a-87e7-c84248f318bb-00-1ha1850zg354t.pike.replit.dev/suggestions'
+        const response = await axios.post('https://2t5fde13-o6moa0ss-ou70ajnjwf63.ac1-preview.marscode.dev/suggestions'
             , { text: lastWord });
         setSuggestions(response.data.suggestions);
         setShowSuggestions(true);
