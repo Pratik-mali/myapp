@@ -21,7 +21,7 @@ const TransliterationInput = ({ value, onChange, placeholder }) => {
 
     if (lastWord) {
       try {
-        const response = await axios.get(`https://pratikmal.pythonanywhere.com/transliterate?text=${lastWord}&lang_code=hi`);
+        const response = await axios.get(`https://pratikmal01.pythonanywhere.com/transliterate?text=${lastWord}&lang_code=hi`);
         setSuggestions(response.data.suggestions);
         setShowSuggestions(true);
       } catch (error) {
