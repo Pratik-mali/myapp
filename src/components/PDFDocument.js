@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     fontSize: 16,
+    fontWeight:'ultrabold',
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 10,
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 10,
   },
   imagePreview: {
     width: 50, // Adjust the size as needed
@@ -170,7 +171,7 @@ const PDFDocument = ({ formData, templateId, additionalImage, imagePreview, cent
             )}
             
             {Object.entries(formData).map(([key, value]) => (
-              !['वडिलांचे_नाव', 'वडिलांचा_व्यवसाय', 'आईचे_नाव', 'बहीण', 'भाऊ', 'मामा', 'चूलते', 'दाजी', 'पत्ता', 'मोबाईल_नं'].includes(key) ? (
+              !['वडिलांचे_नाव', 'वडिलांचा_व्यवसाय', 'आईचे_नाव', 'बहीण', 'भाऊ', 'मामा', 'चूलते', 'दाजी', 'पत्ता', 'मोबाईल_नं', 'नातेसंबंध'].includes(key) ? (
                 formatValue(value, key) ? (
                   <View key={key} style={styles.line}>
                     <Text style={styles.label}>{value.titleOptions ? value.titleOptions[0] : key}:</Text>
@@ -184,7 +185,7 @@ const PDFDocument = ({ formData, templateId, additionalImage, imagePreview, cent
 
             <Text style={styles.sectionHeader}>कौटुंबिक माहिती</Text>
             {Object.entries(formData).map(([key, value]) => (
-              ['वडिलांचे_नाव', 'वडिलांचा_व्यवसाय', 'आईचे_नाव', 'बहीण', 'भाऊ', 'मामा', 'चूलते', 'दाजी'].includes(key) ? (
+              ['वडिलांचे_नाव', 'वडिलांचा_व्यवसाय', 'आईचे_नाव', 'बहीण', 'भाऊ', 'मामा', 'चूलते', 'दाजी', 'नातेसंबंध'].includes(key) ? (
                 formatValue(value, key) ? (
                   <View key={key} style={styles.line}>
                     <Text style={styles.label}>{value.titleOptions ? value.titleOptions[0] : key}:</Text>
