@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import PreviewPage from './components/PreviewPage';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Footer from './components/Footer';
+import UsePolicy from './components/UsePolicy';
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/preview" element={<PreviewPage />} />
+          <Route path="/use-policy" element={<UsePolicy />} />
+
         </Routes>
 
         <Footer />
