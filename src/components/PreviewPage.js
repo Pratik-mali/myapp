@@ -253,8 +253,7 @@ const PreviewPage = () => {
     a.click();
     setLoading(false);
   };
-const [selectedTemplateId, changeSelectedTemplateId] = useState(null);
-
+var selectedTemplateId ;
   const templates = Array.from({ length: 27 }, (_, i) => i + 1);
   const handleEditClick = () => {
     navigate('/input-form/1', {
