@@ -8,7 +8,7 @@ import TemplateSlider from './TemplateSlider';
 
 const BusinessComponent = () => {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory] = useState('All');
   const [previewTemplate, setPreviewTemplate] = useState(null);
 
   const templates = [
@@ -44,9 +44,9 @@ const BusinessComponent = () => {
 
   ];
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-  };
+  // const handleCategoryChange = (category) => {
+  //   setSelectedCategory(category);
+  // };
 
   const handleCustomizeClick = (template) => {
     navigate(`/input-form/${template.id}`);
