@@ -16,19 +16,19 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  // const handleScroll = useCallback(() => {
-  //   const currentScrollPos = window.pageYOffset;
-  //   setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-  //   setPrevScrollPos(currentScrollPos);
-  // }, [prevScrollPos]);
+  const handleScroll = useCallback(() => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+    setPrevScrollPos(currentScrollPos);
+  }, [prevScrollPos]);
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
 
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, [handleScroll]);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
