@@ -1,0 +1,674 @@
+/* General styling for the container */
+
+@font-face {
+  font-family: 'Lato-Black';
+  src: url('../../public/Lato-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.business-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Lato-Black';
+    color: #333;
+}
+
+.myButton {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.myButtons {
+  justify-content: center;
+}
+
+/* Hero section styling */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden; /* Hide overflow for the wave effect */
+}
+
+.hero-image {
+  position: relative; /* Required for the pseudo-element */
+ 
+ background-size: cover; /* Ensure the image covers the entire element */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Center the rotating image vertically */
+}
+
+.rotating-image {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  animation: rotate 100s linear infinite;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.hero-text {
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: white; /* Text color */
+}
+
+.hero-text h1 {
+  padding: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 0px;
+  margin-top: 0%;
+  background-image: linear-gradient(45deg, #f21d7a, #f21d7a);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+}
+.brandname, .brandpara{
+  color: #1b3c73;
+font-weight: bold;  
+
+}
+.hero-text p {
+  margin-top: 2%;
+  font-size: 1.2rem;
+  font-family: 'Lato-Black';
+
+}
+
+/* About section styling */
+.about-section {
+  background: #f9f9f9;
+  padding: 20px;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.about-section1 {
+  padding: 20px;
+  position: relative;
+  background-color: #f9f9f9;
+  background-image: url('../assets/Image\ 1.svg'); /* Replace with the correct path to your uploaded image */
+  background-size: cover; /* Ensure the full image covers the background */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh; /* Set a flexible height */
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ka {
+  font-size: 4.5rem;
+}
+
+.about-section1 h1 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 110%;
+
+}
+
+.about-section1 p {
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+  width: 90%;
+  margin: 10px auto 0 auto;
+  text-align: justify;
+  font-weight: bold;
+
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 768px) {
+  .about-section1 {
+    height: 80vh;
+  }
+
+
+  .ka {
+    font-size: 5rem;
+  }
+
+  .about-section1 h1 {
+    font-size: 3rem;
+    width: 80%;
+  }
+
+  .about-section1 p {
+    font-size: 1.1rem;
+    width: 80%;
+    text-align: justify;
+    font-weight: bold;
+
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-section1 {
+    height: 100vh;
+  }
+
+  .ka {
+    font-size: 7rem;
+  }
+
+  .about-section1 h1 {
+    font-size: 4rem;
+    width: 70%;
+  }
+
+  .about-section1 p {
+    font-size: 1.1rem;
+    width: 70%;
+    text-align: justify;
+    font-weight: bold;
+  }
+
+  .impdiv {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* About section 2 styling */
+.about-section2 {
+  padding: 20px;
+  position: relative;
+  background-color: #ffffff;
+  background-image: url('../assets/Layer\ 9.svg'); /* Replace with the correct path to your uploaded image */
+  background-repeat: no-repeat;
+  background-position: unset;
+  background-size: 100px;
+  height: 90vh; /* Set a flexible height */
+  color: #1b3c73;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.about-section2 h1 {
+  font-size: 2rem;
+  color: #f6287b;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 110%;
+}
+
+.about-section2 p {
+  font-size: 1.1rem;
+  color: #1b3c73;
+  text-align: center;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  text-align: justify;
+  font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 768px) {
+  .about-section2 {
+    height: 80vh;
+  }
+
+  .ka2 {
+    font-size: 5rem;
+  }
+
+  .about-section2 h1 {
+    font-size: 3rem;
+    width: 80%;
+  }
+
+  .about-section2 p {
+    font-size: 1.1rem;
+    width: 80%;
+    text-align: justify;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-section2 {
+    height: 100vh;
+  }
+
+  .ka2 {
+    font-size: 7rem;
+  }
+
+  .about-section2 h1 {
+    font-size: 4rem;
+    width: 65%;
+  }
+
+  .about-section2 p {
+    font-size: 1.1rem;
+    width: 70%;
+    text-align: justify;
+    margin-left: 10%;
+    font-weight: bold;
+    margin-top: 10%;
+  }
+
+  .impdiv {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Templates section styling */
+.templates-section {
+  background: #ffffff; /* Background color for the section itself */
+  padding: 0px;
+  width: 50%; /* Maintain the width */
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  position: relative; /* Needed for the absolute positioning of the pseudo-element */
+  z-index: 1; /* Ensure content is above the background */
+  overflow: hidden; /* Ensures the pseudo-element does not overflow the section */
+}
+
+
+
+
+.templates-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  background: linear-gradient(45deg, #82009c, #610505);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: linear-gradient(45deg, #82009c, #610505);
+  transform: translateY(-2px);
+}
+
+.template-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.template-option {
+  background: #fff3eb;
+  padding: 20px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.best-seller {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgb(255, 187, 0);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.template-option img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.template-description {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: left; /* Align the text to the left */
+}
+
+.template-buttons {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the start */
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.template-button {
+  display: inline-block;
+  padding: 8px;
+  background: white;
+  color: rgb(94, 47, 99);
+  border: 1px solid rgb(94, 47, 99);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.template-button:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+.template-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-image: url('../assets/Layer\ 6.svg'); /* Replace with the correct path to your uploaded image */
+  background-repeat: no-repeat;
+  background-position: bottom center; /* Position the background image at the bottom */
+  background-size: 100% auto; /* Ensure the background image occupies 100% of the width */
+}
+
+.template-option {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  border-radius: 0px;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+
+.template-option:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+.template-option img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.template-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.template-button {
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  border: 1px solid #f72a7b;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.template-button:hover {
+  background-color: #f72a7b;
+}
+
+.best-seller {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: gold;
+  color: black;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Modal styling */
+/* Updated CSS for the preview modal and close button */
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.preview-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.preview-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  text-align: end;
+  background-color: #ff0000;
+  right: 10px;
+  background: red;
+  width: 30px;
+  color: #ffffff;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ff0000;
+}
+/* Responsive styling */
+@media (max-width: 768px) {
+  .about-section,
+  .templates-section {
+    padding: 15px;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+
+  .filter-buttons button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .templates-section h2,
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-section {
+    background-image: url('./pixelcut-export.jpeg'); /* Replace with the correct path to your uploaded image */
+    background-repeat: no-repeat;
+    background-position: bottom left; /* Adjust to your preference */
+    background-size: auto 45%; /* Scale the image's height to 70% of the section's height */
+}
+
+
+
+  .hero-section {
+    height: 90vh; /* Full screen height for mobile */
+  }
+
+  .hero-text h1 {
+    font-size: 2.3rem;
+    margin-left: 20px;
+  }
+
+  .hero-text p {
+    font-size: 0.8rem;
+  }
+
+  .rotating-image {
+    width: 100vh; /* Adjust size for mobile */
+    height: 100vh;
+    opacity: 25%;
+  }
+  .hero-image{
+    justify-content: flex-start;
+    padding-top: 50%;
+
+
+  }
+
+  .hidemobile{
+    display: none;
+  }
+
+  .about-section1{
+    background-image: none;
+    background-color: white;
+
+  }
+
+  
+  .about-section1 p{
+   
+    color: #1b3c73;
+    text-align: left;
+    font-weight: bold;
+
+  }
+
+  .about-section1 h1{
+   
+    color: #f6287b;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+
+    margin-top: -50px;
+        padding-top: 0;
+       
+
+  }
+
+  .brandpara{
+
+  }
+
+  
+}
+
+
+@media (min-width: 769px) {
+  .hero-section {
+    height: 75vh; /* Full screen height for desktop */
+    padding-top: 5%;
+
+  }
+
+  .rotating-image {
+    width: 100vh;
+    height: 100vh;
+    opacity: 25%;
+  }
+}
+
+/* CSS for scroll buttons */
+.scroll-button {
+  background: #f6287b;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  width: auto;
+  margin: 5px;
+}
+
+.scroll-button:hover {
+  background-color: #f096bd;
+  color: white;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #5e2f63;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+}
+
+.scroll-to-top:hover {
+  background-color: #ff5500;
+}
+
+/* Default layout (for desktop) */
+
+

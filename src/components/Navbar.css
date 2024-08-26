@@ -1,0 +1,204 @@
+/* General styling for the navbar */
+.navbar {
+  padding: 64px 0px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s;
+  font-family: 'Lato';
+  background-image: url('./header-bg.svg'); /* Update this path */
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover; /* Or use 'contain' depending on the size you want */
+  padding-bottom: 14%;
+}
+
+/* Rest of your existing CSS remains the same */
+
+.navbar.hidden {
+  top: -100px;
+}
+
+.navbar.visible {
+  top: 0;
+}
+
+.navbar-container {
+  width: 65%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 32%;
+  
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 140px;
+}
+
+.self-assess-button {
+  padding: 0px;
+}
+
+
+.whatsapp-icon {
+  margin-right: 5px;
+}
+
+/* Styling for the hamburger icon */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  margin-left: 10px;
+  margin-right: 35px;
+  width: 10%;
+  z-index: 9999;
+
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  display: block;
+  position: relative;
+  left: 80%;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-icon::before {
+  top: -10px;
+}
+
+.hamburger-icon::after {
+  top: 10px;
+}
+
+.hamburger.open .hamburger-icon {
+  transform: rotate(45deg);
+}
+
+.hamburger.open .hamburger-icon::before {
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+.hamburger.open .hamburger-icon::after {
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+/* Desktop menu */
+.navbar-menu-desktop {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu-desktop a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: x-large;
+  margin: 0 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-menu-desktop a:hover {
+  color: #ff7300;
+  transform: scale(1.1);
+}
+
+/* Mobile menu */
+.navbar-menu-mobile {
+  display: none;
+  flex-direction: column;
+  width: 66%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  position: fixed;
+  top: 0%;
+  right: 0;
+  padding: 0rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  justify-content: center;
+}
+
+.navbar-menu-mobile.open {
+  display: flex;
+}
+
+.navbar-menu-mobile a {
+  color: #0f084d;
+  text-decoration: none;
+  background-color: #ffd1dc;
+  padding: 5%;
+  width: 70%;
+  text-align: center;
+  margin-left: 5%;
+  border-radius: 50px;
+  margin-top: 10%;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu-desktop {
+    display: none;
+  }
+  .abd{
+    /* display: none; */
+    font-size: 20px;
+  }
+  .navbar {
+    padding: 12px 0px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+    font-family: 'Lato';
+    background-image: url('./header-bg.svg'); /* Update this path */
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover; /* Or use 'contain' depending on the size you want */
+    padding-bottom: 14%;
+  }
+  .navbar-logo {
+    height: 30%;
+    width: 50%;
+  }
+}
+.centlogo h1{
+  color: #fff;
+  font-size: xxx-large;
+  margin-bottom: 18px;
+  margin-top: -20px;
+  
+
+}
+
+.abd{
+  text-decoration: none;
+  color: #fff;
+}
