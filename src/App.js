@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BusinessComponent from './components/BusinessComponent';
@@ -9,9 +8,14 @@ import ContactUs from './components/ContactUs';
 import TermsAndConditions from './components/TermsAndConditions';
 import Navbar from './components/Navbar';
 import PreviewPage from './components/PreviewPage';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import Footer from './components/Footer';
 import UsePolicy from './components/UsePolicy';
+import JoinWhatsAppGroup from './components/JoinWhatsAppGroup'; // Import Join WhatsApp Group
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+const JoinPage = () => {
+  return <h2>Join Page Placeholder</h2>; // Placeholder for the "Join" page
+};
 
 const App = () => {
   return (
@@ -27,7 +31,8 @@ const App = () => {
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/preview" element={<PreviewPage />} />
           <Route path="/use-policy" element={<UsePolicy />} />
-
+          <Route path="/join-whatsapp-group" element={<JoinWhatsAppGroup />} /> {/* Join WhatsApp Group Route */}
+          <Route path="/join" element={<JoinPage />} /> {/* Add the Join page route */}
         </Routes>
 
         <Footer />
