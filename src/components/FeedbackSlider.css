@@ -1,0 +1,73 @@
+.feedback-slider {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #f72a7b;
+}
+
+.feedback-card {
+  background-color: #ffd1dc; /* Background color for the card */
+  color: white;
+  /* padding: 20px; */
+  border-radius: 20px;
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+  padding-top: 20px;
+}
+
+.feedback-card h3 {
+  margin: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.feedback-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ff4070; /* Bold pink color for the feedback text */
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: #fff; /* White background for the text content */
+  padding: 15px;
+  border-radius: 0 0 20px 20px; /* Rounded corners for the bottom part of the card */
+}
+
+.feedback-card .avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #f72a7b; /* Light pink background for the circle */
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+.feedback-card .decoration {
+  margin-top: -20px;
+  background-color: #ffffff;
+  border-radius: 0 0 20px 20px;
+}
+
+.feedback-card .decoration img {
+  width: 25px;
+  height: 25px;
+  margin: 0 2px;
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet {
+  background: #ff4070;
+}
+.angry{
+  background-color: #ffd1dc;
+}
+@media (min-width: 1024px) {
+  .feedback-card {
+    max-width: 300px;
+    margin: 0 15px;
+  }
+}
